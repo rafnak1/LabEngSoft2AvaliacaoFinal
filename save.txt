@@ -1,0 +1,16 @@
+  reserva:
+    build:
+      context: reserva
+      dockerfile: Dockerfile
+    hostname: reserva
+    ports:
+    - "8000:3000"
+  visualiza:
+    image: hello-world
+    hostname: visualiza
+    ports:
+    - "8001:3000"
+
+  dbvisualiza:
+    image: mongo
+    hostname: dbvisualiza

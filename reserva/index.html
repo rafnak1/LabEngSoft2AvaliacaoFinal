@@ -1,0 +1,27 @@
+<html>
+<header>
+    <title>Reserva de lugares</title>
+    <script>
+        function mandaReserva(n) {
+            (async () => {
+                const rawResponse = await fetch('http://localhost:3000', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({numeroAssento: n})
+                });
+            })();
+        }
+
+    </script>
+</header>
+
+<body>
+    <button onclick="mandaReserva(1)">Reserva assento 1</button>
+    <button onclick="mandaReserva(2)">Reserva assento 2</button>
+    <button onclick="mandaReserva(3)">Reserva assento 3</button>
+</body>
+
+</html>

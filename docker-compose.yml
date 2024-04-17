@@ -1,0 +1,8 @@
+services:
+
+  dbreserva:
+    image: mongo
+    hostname: dbreserva
+    ports: 
+    - "27017:27017"
+

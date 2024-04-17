@@ -1,0 +1,30 @@
+<html>
+<header>
+    <title>Ver Reserva de lugares</title>
+    <script>
+        function veReserva() {
+            (async () => {
+                const rawResponse = await fetch('http://localhost:3001/lugares', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const content = await rawResponse.json();
+
+                document.getElementById("lugares").innerHTML = content;
+            })();
+        }
+
+    </script>
+</header>
+
+<body>
+    <script>veReserva()</script>
+    <div id="lugares" style="white-space:pre">
+        carregando...
+    </div>
+</body>
+
+</html>
