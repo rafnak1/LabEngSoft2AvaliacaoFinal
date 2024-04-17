@@ -5,5 +5,11 @@ services:
       dockerfile: Dockerfile
     hostname: reserva
     ports:
-    - "8000:3000"
-
+    - "3000:3000"
+  visualiza:
+    build:
+      context: visualiza
+      dockerfile: Dockerfile
+    hostname: visualiza
+    ports:
+    - "3002:3002"

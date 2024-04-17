@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3001
+const port = 3002
 const {read, write, init} = require('./utils')
 
 var bodyParser = require('body-parser')

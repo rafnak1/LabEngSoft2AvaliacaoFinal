@@ -24,7 +24,7 @@ app.post('/', (req, res) => {
     data[req.body.numeroAssento] = 'ocupado'
     console.log('post')
     write(data)
-    axios.post('http://localhost:3001/reservou', {
+    axios.post('http://visualiza:3002/reservou', {
         numeroAssento: req.body.numeroAssento 
     }).then(() => {
         res.sendStatus(200)
