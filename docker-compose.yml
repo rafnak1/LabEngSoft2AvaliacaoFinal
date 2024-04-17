@@ -1,8 +1,9 @@
 services:
-
-  dbreserva:
-    image: mongo
-    hostname: dbreserva
-    ports: 
-    - "27017:27017"
+  reserva:
+    build:
+      context: reserva
+      dockerfile: Dockerfile
+    hostname: reserva
+    ports:
+    - "8000:3000"
 
